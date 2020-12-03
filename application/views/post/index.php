@@ -64,6 +64,9 @@
                             <a class="dropdown-item" href="#">PKK</a>
                         </div>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Masuk</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -124,12 +127,12 @@
 
                 <!-- Search Widget -->
                 <div class="card my-4">
-                    <h5 class="card-header">Search</h5>
+                    <h5 class="card-header">Pencarian</h5>
                     <div class="card-body">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for...">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary" type="button">Go!</button>
+                                <button class="btn btn-secondary" type="button">Cari!</button>
                             </span>
                         </div>
                     </div>
@@ -137,32 +140,32 @@
 
                 <!-- Categories Widget -->
                 <div class="card my-4">
-                    <h5 class="card-header">Categories</h5>
+                    <h5 class="card-header">Kategori</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">Web Design</a>
+                                        <a href="#">UMKM</a>
                                     </li>
                                     <li>
-                                        <a href="#">HTML</a>
+                                        <a href="#">Agenda</a>
                                     </li>
                                     <li>
-                                        <a href="#">Freebies</a>
+                                        <a href="#">Laporan</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">JavaScript</a>
+                                        <a href="#">Peraturan</a>
                                     </li>
                                     <li>
-                                        <a href="#">CSS</a>
+                                        <a href="#">Pembangunan</a>
                                     </li>
                                     <li>
-                                        <a href="#">Tutorials</a>
+                                        <a href="#">Dokumentasi</a>
                                     </li>
                                 </ul>
                             </div>
@@ -172,7 +175,7 @@
 
                 <!-- Side Widget -->
                 <div class="card my-4">
-                    <h5 class="card-header">Side Widget</h5>
+                    <h5 class="card-header">Desa Ambal</h5>
                     <div class="card-body">
                         You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
                     </div>
