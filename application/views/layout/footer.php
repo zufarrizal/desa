@@ -2,7 +2,7 @@
     <div class="pull-right hidden-xs">
         <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2020 <a href="#">MTs Wathoniyah Islamiyah</a>.</strong> All rights
+    <strong>Copyright &copy; <?= date('Y') ?> <a href="#">MTs Wathoniyah Islamiyah</a>.</strong> All rights
     reserved.
 </footer>
 <!-- Add the sidebar's background. This div must be placed
@@ -10,7 +10,6 @@
 <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
 <!-- jQuery 3 -->
 <script src="<?= base_url('assets') ?>/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -42,6 +41,19 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url('assets') ?>/dist/js/demo.js"></script>
 <!-- page script -->
+<!-- CK Editor -->
+<script src="<?= base_url('assets') ?>/bower_components/ckeditor/ckeditor.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="<?= base_url('assets') ?>/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script>
+    $(function() {
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace('editor1')
+        //bootstrap WYSIHTML5 - text editor
+        $('.textarea').wysihtml5()
+    })
+</script>
 <script>
     $(function() {
         //Initialize Select2 Elements

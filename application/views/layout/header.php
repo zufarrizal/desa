@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/timepicker/bootstrap-timepicker.min.css">
     <!-- Select2 -->
     <link rel="stylesheet" href="<?= base_url('assets') ?>/bower_components/select2/dist/css/select2.min.css">
-
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,11 +77,13 @@
                 </div>
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">Iktisar Desa</li>
+                    <li><a href="<?= base_url('dashboard'); ?>"><i class="fa fa-book"></i> <span>Dashboard</span></a></li>
                     <li class="header">Kelola Desa</li>
                     <li><a href="<?= base_url('visimisi'); ?>"><i class="fa fa-book"></i> <span>Visi & Misi Desa</span></a></li>
                     <li><a href="<?= base_url('struktur'); ?>"><i class="fa fa-users"></i> <span>Struktur Desa</span></a></li>
-                    <li><a href="<?= base_url('siswa'); ?>"><i class="fa fa-bookmark-o"></i> <span>Tentang Desa</span></a></li>
-                    <li><a href="<?= base_url('tentang'); ?>"><i class="fa fa-institution"></i> <span>Program Desa</span></a></li>
+                    <li><a href="<?= base_url('tentang'); ?>"><i class="fa fa-bookmark-o"></i> <span>Tentang Desa</span></a></li>
+                    <li><a href="<?= base_url('program'); ?>"><i class="fa fa-institution"></i> <span>Program Desa</span></a></li>
                     <li class="header">Kelola Berita</li>
                     <li><a href="<?= base_url('kategori'); ?>"><i class="fa fa-bars"></i> <span>Kategori</span></a></li>
                     <li><a href="<?= base_url('berita'); ?>"><i class="fa fa-internet-explorer"></i> <span>Berita</span></a></li>
