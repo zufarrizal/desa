@@ -5,7 +5,7 @@ class Post extends CI_Controller
 {
     public function index()
     {
-        $data['title'] = "Desa Ambal";
+        $data['title'] = "Desa Benerkulon";
         $this->load->view('post/index', $data);
     }
 }

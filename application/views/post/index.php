@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Home - Start Bootstrap Template</title>
+    <title>Selamat Datang Di Desa Benerkulon</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url('assets') ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,8 +21,8 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="opacity: 80%" ;>
+        <div class=" container">
             <a class="navbar-brand" href="#"><?= $title; ?></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,38 +34,20 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profil Desa
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Sejarah Desa</a>
-                            <a class="dropdown-item" href="#">Logo Desa</a>
-                            <a class="dropdown-item" href="#">Wilayah Desa</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pemerintahan Desa
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Visi & Misi</a>
-                            <a class="dropdown-item" href="#">Pemerintah Desa</a>
-                            <a class="dropdown-item" href="#">Badan Permusyaratan Desa</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Lembaga Masyarakat
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">LPM</a>
-                            <a class="dropdown-item" href="#">Karang Taruna</a>
-                            <a class="dropdown-item" href="#">PKK</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?= base_url(); ?>">Visi & Misi Desa<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('auth'); ?>">Masuk</a>
+                        <a class="nav-link active" href="<?= base_url(); ?>">Struktur Desa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?= base_url(); ?>">Program Desa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?= base_url('auth'); ?>">Tentang Desa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?= base_url(); ?>">Masuk</a>
                     </li>
                 </ul>
             </div>
@@ -81,14 +63,14 @@
             <div class="col-md-8">
 
                 <h1 class="my-4">Selamat Datang di
-                    <small>Website Desa Ambal</small>
+                    <small>Website Desa Benerkulon</small>
                 </h1>
-
+                <img class="card-img-top mb-3" src="http://placehold.it/750x300" alt="Card image cap">
                 <!-- Blog Post -->
                 <div class="card mb-4">
                     <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
                     <div class="card-body">
-                        <h2 class="card-title">Perkembangan Desa Ambal</h2>
+                        <h2 class="card-title">Perkembangan Desa Benerkulon</h2>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
                         <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya &rarr;</a>
                     </div>
@@ -100,7 +82,7 @@
                 <div class="card mb-4">
                     <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
                     <div class="card-body">
-                        <h2 class="card-title">Sate Khas Desa Ambal</h2>
+                        <h2 class="card-title">Makanan Khas Desa Benerkulon</h2>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
                         <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya &rarr;</a>
                     </div>
@@ -175,7 +157,7 @@
 
                 <!-- Side Widget -->
                 <div class="card my-4">
-                    <h5 class="card-header">Desa Ambal</h5>
+                    <h5 class="card-header">Desa Benerkulon</h5>
                     <div class="card-body">
                         You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
                     </div>
@@ -192,7 +174,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Desa Ambal Kab. Kebumen 2020</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Desa Benerkulon Kab. Kebumen 2020</p>
         </div>
         <!-- /.container -->
     </footer>
