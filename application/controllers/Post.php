@@ -7,6 +7,9 @@ class Post extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Visimisi_Model');
+        $this->load->model('Program_Model');
+        $this->load->model('Tentang_Model');
+        $this->load->model('Struktur_Model');
     }
 
     public function index()
@@ -37,6 +40,8 @@ class Post extends CI_Controller
 
     public function struktur()
     {
+        $id = 1;
+        $data['struktur'] = $this->Struktur_Model->getStrukturById($id);
         $data['title'] = "Visi Misi Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/struktur', $data);
@@ -45,6 +50,8 @@ class Post extends CI_Controller
 
     public function program()
     {
+        $id = 1;
+        $data['program'] = $this->Program_Model->getProgramById($id);
         $data['title'] = "Visi Misi Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/program', $data);
@@ -53,6 +60,8 @@ class Post extends CI_Controller
 
     public function tentang()
     {
+        $id = 1;
+        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
         $data['title'] = "Visi Misi Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/tentang', $data);

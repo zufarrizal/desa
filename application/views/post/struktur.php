@@ -7,7 +7,7 @@
         <div class="col-lg-8">
 
             <!-- Title -->
-            <h1 class="mt-4">Visi Misi Desa</h1>
+            <h1 class="mt-4">Struktur Desa</h1>
 
             <!-- Author -->
             <p class="lead">
@@ -18,10 +18,10 @@
             <hr>
 
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="<?= base_url('assets/dist/img/') . $visimisi['foto']; ?>" alt="">
+            <img class="img-fluid rounded" src="<?= base_url('assets/dist/img/') . $struktur['foto']; ?>" alt="">
 
             <hr>
 
             <!-- Post Content -->
-            <?= $visimisi['visimisi']; ?>
+            <?= $struktur['keterangan']; ?>
             <hr>
