@@ -19,12 +19,16 @@
                         <h3 class="box-title">Form <?= $title ?></h3>
                     </div>
                     <!-- /.box-header -->
-                    <form role="form" method="POST" action="">
+                    <form role="form" method="POST" action="" enctype="multipart/form-data">
                         <div class="box-body">
                             <input type="hidden" class="form-control" id="exampleInputEmail1" name="id_visimisi" id="id_visimisi" value="<?= $visimisi['id_visimisi']; ?>">
                             <div class="form-group">
-                                <label for="foto">Foto Desa</label>
-                                <input type="file" id="foto" name="foto">
+                                <label for="foto">Tampilan Foto Sekarang</label>
+                                <img src="<?= base_url('assets/dist/img/') . $visimisi['foto']; ?>" alt="<?= $visimisi['foto']; ?>" style="max-width: 100%;">
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Foto Desa</label>
+                                <input type="file" name="image" id="image" />
                             </div>
                             <div class="form-group">
                                 <label for="visimisi">Visi Misi</label><small class="text-danger"></small>

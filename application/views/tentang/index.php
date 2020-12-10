@@ -19,15 +19,19 @@
                         <h3 class="box-title">Form <?= $title ?></h3>
                     </div>
                     <!-- /.box-header -->
-                    <form role="form" method="POST" action="">
+                    <form role="form" method="POST" action="" enctype="multipart/form-data">
                         <div class="box-body">
                             <input type="hidden" class="form-control" id="exampleInputEmail1" name="id_tentang" id="id_tentang" value="<?= $tentang['id_tentang']; ?>">
                             <div class="form-group">
-                                <label for="foto">Foto Desa</label>
-                                <input type="file" id="foto" name="foto">
+                                <label for="foto">Tampilan Foto Sekarang</label>
+                                <img src="<?= base_url('assets/dist/img/') . $tentang['foto']; ?>" alt="<?= $tentang['foto']; ?>" style="max-width: 100%;">
                             </div>
                             <div class="form-group">
-                                <label for="tentang">Tentang Desa</label>
+                                <label for="image">Foto Desa</label>
+                                <input type="file" name="image" id="image" />
+                            </div>
+                            <div class="form-group">
+                                <label for="tentang">Tentang Desa</label><small class="text-danger"></small>
                                 <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd;" name="tentang" id="tentang"><?= $tentang['tentang']; ?></textarea>
                             </div>
                         </div>
