@@ -11,7 +11,7 @@
     </section>
 
     <section class="content-header">
-        <a href="<?= base_url('kelas/tambah'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah</a>
+        <a href="<?= base_url('kategori/tambah'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah</a>
     </section>
 
     <!-- Main content -->
