@@ -12,33 +12,29 @@
 
 <!-- Sidebar Widgets Column -->
 <div class="col-md-4">
-
-    <!-- Search Widget
-    <div class="card my-4">
-        <h5 class="card-header">Pencarian</h5>
-        <div class="card-body">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-append">
-                    <button class="btn btn-secondary" type="button">Cari!</button>
-                </span>
-            </div>
-        </div>
-    </div> -->
-
     <!-- Categories Widget -->
-    <?php $kategori = $this->db->get('kategori')->result_array(); ?>
     <div class="card my-4">
-        <h5 class="card-header">Kategori</h5>
+        <h5 class="card-header">Program Desa</h5>
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="list-unstyled mb-0">
-                        <?php foreach ($kategori as $ktg) : ?>
-                            <li>
-                                <a href=""><?= $ktg['kategori']; ?></a>
-                            </li>
+                        <?php foreach ($program as $prg) : ?>
+                            <li><?= $prg['program']; ?></li>
                         <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card my-4">
+        <h5 class="card-header">Tentang Desa</h5>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-unstyled mb-0">
+                        <li><?= substr($tentang['tentang'], 0, 200); ?></li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +60,7 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Desa Benerkulon Kab. Kebumen 2020</p>
+        <p class="m-0 text-center text-white">Copyright &copy; <?= date('Y') ?> Desa Benerkulon Kec. Ambal Kab. Kebumen</p>
     </div>
     <!-- /.container -->
 </footer>

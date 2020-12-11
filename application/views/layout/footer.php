@@ -2,7 +2,7 @@
     <div class="pull-right hidden-xs">
         <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; <?= date('Y') ?> <a href="#">MTs Wathoniyah Islamiyah</a>.</strong> All rights
+    <strong>Copyright &copy; <?= date('Y') ?> <a href="#">Desa Benerkulon Kec. Ambal Kab. Kebumen</a>.</strong> All rights
     reserved.
 </footer>
 <!-- Add the sidebar's background. This div must be placed

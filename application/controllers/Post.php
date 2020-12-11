@@ -18,6 +18,7 @@ class Post extends CI_Controller
         $id = 1;
         $data['tentang'] = $this->Tentang_Model->getTentangById($id);
         $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['program'] = $this->Program_Model->getAllProgram();
 
         $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
@@ -27,6 +28,9 @@ class Post extends CI_Controller
 
     public function berita()
     {
+        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['program'] = $this->Program_Model->getAllProgram();
+
         $data['title'] = "Berita Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/berita', $data);
@@ -36,6 +40,10 @@ class Post extends CI_Controller
     public function visimisi()
     {
         $id = 1;
+        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['program'] = $this->Program_Model->getAllProgram();
+
         $data['visimisi'] = $this->Visimisi_Model->getVisimisiById($id);
         $data['title'] = "Visi Misi Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
@@ -46,6 +54,10 @@ class Post extends CI_Controller
     public function struktur()
     {
         $id = 1;
+        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['program'] = $this->Program_Model->getAllProgram();
+
         $data['struktur'] = $this->Struktur_Model->getStrukturById($id);
         $data['title'] = "Visi Misi Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
@@ -56,7 +68,11 @@ class Post extends CI_Controller
     public function program()
     {
         $id = 1;
-        $data['program'] = $this->Program_Model->getProgramById($id);
+        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['program'] = $this->Program_Model->getAllProgram();
+
+        $data['programs'] = $this->Program_Model->getProgramById($id);
         $data['title'] = "Visi Misi Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/program', $data);
@@ -65,6 +81,9 @@ class Post extends CI_Controller
 
     public function tentang()
     {
+        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['program'] = $this->Program_Model->getAllProgram();
+
         $id = 1;
         $data['tentang'] = $this->Tentang_Model->getTentangById($id);
         $data['title'] = "Visi Misi Desa Benerkulon";

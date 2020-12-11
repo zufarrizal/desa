@@ -19,7 +19,7 @@
                         <img class="card-img-top" src="<?= base_url('assets/dist/img/') . $brt['foto']; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h2 class="card-title"><?= $brt['judul']; ?></h2>
-                            <p class="card-text"><?= substr($brt['berita'], 0, 150); ?></p>
+                            <p class="card-text"><?= substr($brt['berita'], 0, 175); ?></p>
                             <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya &rarr;</a>
                         </div>
                         <div class="card-footer text-muted">

@@ -18,10 +18,10 @@
             <hr>
 
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="<?= base_url('assets/dist/img/') . $program['foto']; ?>" alt="">
+            <img class="img-fluid rounded" src="<?= base_url('assets/dist/img/') . $programs['foto']; ?>" alt="">
 
             <hr>
 
             <!-- Post Content -->
-            <?= $program['program']; ?>
+            <?= $programs['program']; ?>
             <hr>

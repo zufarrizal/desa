@@ -32,18 +32,28 @@
                             <div class="form-group">
                                 <label for="kategori">Kategori</label><small class="text-danger"><?= form_error('kategori'); ?></small>
                                 <select class="custom-select form-control" id="kategori" name="kategori" style="width: 100%;">
+                                    <option value="" selected disabled>- Pilih Kategori -</option>
                                     <?php foreach ($kategori as $ktg) : ?>
                                         <option value="<?= $ktg['kategori']; ?>"><?= $ktg['kategori']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="visimisi">Berita</label><small class="text-danger"></small>
-                                <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd;" name="visimisi" id="visimisi"></textarea>
+                                <label for="berita">Berita</label><small class="text-danger"><?= form_error('berita'); ?></small>
+                                <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd;" name="berita" id="berita"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="image">Unggah Gambar</label>
                                 <input type="file" name="image" id="image" />
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal</label><small class="text-danger"><?= form_error('tanggal'); ?></small>
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="date" class="form-control pull-right" id="tanggal" name="tanggal">
+                                </div>
                             </div>
                         </div>
                         <!-- /.box-body -->
