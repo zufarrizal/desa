@@ -5,16 +5,16 @@ class Kategori extends CI_Controller
 {
     public function __construct()
     {
-        $data['users'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        if ($data['users'] == null) {
-            return redirect('auth');
-        }
-
         parent::__construct();
         $this->load->model('Kategori_Model');
     }
     public function index()
     {
+        $data['user'] = $this->session->userdata('username');
+        if ($data['user'] == null) {
+            return redirect('auth');
+        }
+
         $data['kategori'] = $this->Kategori_Model->getAllKategori();
         $data['title'] = "Kategori Berita";
         $this->load->view('layout/header', $data);
@@ -24,6 +24,11 @@ class Kategori extends CI_Controller
 
     public function tambah()
     {
+        $data['user'] = $this->session->userdata('username');
+        if ($data['user'] == null) {
+            return redirect('auth');
+        }
+
         $this->form_validation->set_rules('kategori', 'Kategori Berita', 'required|trim');
         $this->form_validation->set_rules('keterangan', 'Keterangan Kategori', 'required|trim');
 
@@ -44,6 +49,11 @@ class Kategori extends CI_Controller
 
     public function ubah($id)
     {
+        $data['user'] = $this->session->userdata('username');
+        if ($data['user'] == null) {
+            return redirect('auth');
+        }
+
         $data['kategori'] = $this->Kategori_Model->getKategoriById($id);
 
         $this->form_validation->set_rules('kategori', 'Kategori Berita', 'required|trim');
@@ -70,6 +80,11 @@ class Kategori extends CI_Controller
 
     public function hapus($id)
     {
+        $data['user'] = $this->session->userdata('username');
+        if ($data['user'] == null) {
+            return redirect('auth');
+        }
+
         $this->Kategori_Model->deleteKategori($id);
         redirect('kategori');
     }

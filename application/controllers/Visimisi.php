@@ -5,16 +5,16 @@ class Visimisi extends CI_Controller
 {
     public function __construct()
     {
-        $data['users'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        if ($data['users'] == null) {
-            return redirect('auth');
-        }
-
         parent::__construct();
         $this->load->model('Visimisi_Model');
     }
     public function index()
     {
+        $data['user'] = $this->session->userdata('username');
+        if ($data['user'] == null) {
+            return redirect('auth');
+        }
+
         $id = 1;
         $data['visimisi'] = $this->Visimisi_Model->getVisimisiById($id);
         $this->form_validation->set_rules('visimisi', 'Visi Misi', 'required|trim');

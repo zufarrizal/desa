@@ -5,8 +5,8 @@ class Dashboard extends CI_Controller
 {
     public function index()
     {
-        $data['users'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        if ($data['users'] == null) {
+        $data['user'] = $this->session->userdata('username');
+        if ($data['user'] == null) {
             return redirect('auth');
         }
 
