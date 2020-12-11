@@ -15,8 +15,7 @@ class Post extends CI_Controller
 
     public function index()
     {
-        $id = 1;
-        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['tentang'] = $this->Tentang_Model->getTentangById(1);
         $data['berita'] = $this->Berita_Model->getAllBerita();
         $data['program'] = $this->Program_Model->getAllProgram();
 
@@ -40,12 +39,11 @@ class Post extends CI_Controller
 
     public function visimisi()
     {
-        $id = 1;
-        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['tentang'] = $this->Tentang_Model->getTentangById(1);
         $data['berita'] = $this->Berita_Model->getAllBerita();
         $data['program'] = $this->Program_Model->getAllProgram();
 
-        $data['visimisi'] = $this->Visimisi_Model->getVisimisiById($id);
+        $data['visimisi'] = $this->Visimisi_Model->getVisimisiById(1);
         $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/visimisi', $data);
@@ -55,11 +53,11 @@ class Post extends CI_Controller
     public function struktur()
     {
         $id = 1;
-        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['tentang'] = $this->Tentang_Model->getTentangById(1);
         $data['berita'] = $this->Berita_Model->getAllBerita();
         $data['program'] = $this->Program_Model->getAllProgram();
 
-        $data['struktur'] = $this->Struktur_Model->getStrukturById($id);
+        $data['struktur'] = $this->Struktur_Model->getStrukturById(1);
         $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/struktur', $data);
@@ -69,11 +67,11 @@ class Post extends CI_Controller
     public function program()
     {
         $id = 1;
-        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['tentang'] = $this->Tentang_Model->getTentangById(1);
         $data['berita'] = $this->Berita_Model->getAllBerita();
         $data['program'] = $this->Program_Model->getAllProgram();
 
-        $data['programs'] = $this->Program_Model->getProgramById($id);
+        $data['programs'] = $this->Program_Model->getProgramById(1);
         $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/program', $data);
@@ -85,8 +83,7 @@ class Post extends CI_Controller
         $data['berita'] = $this->Berita_Model->getAllBerita();
         $data['program'] = $this->Program_Model->getAllProgram();
 
-        $id = 1;
-        $data['tentang'] = $this->Tentang_Model->getTentangById($id);
+        $data['tentang'] = $this->Tentang_Model->getTentangById(1);
         $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/tentang', $data);
