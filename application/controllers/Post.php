@@ -26,12 +26,13 @@ class Post extends CI_Controller
         $this->load->view('layout/p_footer');
     }
 
-    public function berita()
+    public function berita($id)
     {
-        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['tentang'] = $this->Tentang_Model->getTentangById(1);
+        $data['berita'] = $this->Berita_Model->getBeritaById($id);
         $data['program'] = $this->Program_Model->getAllProgram();
 
-        $data['title'] = "Berita Desa Benerkulon";
+        $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/berita', $data);
         $this->load->view('layout/p_footer');
@@ -45,7 +46,7 @@ class Post extends CI_Controller
         $data['program'] = $this->Program_Model->getAllProgram();
 
         $data['visimisi'] = $this->Visimisi_Model->getVisimisiById($id);
-        $data['title'] = "Visi Misi Desa Benerkulon";
+        $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/visimisi', $data);
         $this->load->view('layout/p_footer');
@@ -59,7 +60,7 @@ class Post extends CI_Controller
         $data['program'] = $this->Program_Model->getAllProgram();
 
         $data['struktur'] = $this->Struktur_Model->getStrukturById($id);
-        $data['title'] = "Visi Misi Desa Benerkulon";
+        $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/struktur', $data);
         $this->load->view('layout/p_footer');
@@ -73,7 +74,7 @@ class Post extends CI_Controller
         $data['program'] = $this->Program_Model->getAllProgram();
 
         $data['programs'] = $this->Program_Model->getProgramById($id);
-        $data['title'] = "Visi Misi Desa Benerkulon";
+        $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/program', $data);
         $this->load->view('layout/p_footer');
@@ -86,7 +87,7 @@ class Post extends CI_Controller
 
         $id = 1;
         $data['tentang'] = $this->Tentang_Model->getTentangById($id);
-        $data['title'] = "Visi Misi Desa Benerkulon";
+        $data['title'] = "Desa Benerkulon";
         $this->load->view('layout/p_header', $data);
         $this->load->view('post/tentang', $data);
         $this->load->view('layout/p_footer');

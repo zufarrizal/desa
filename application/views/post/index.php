@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <h2 class="card-title"><?= $brt['judul']; ?></h2>
                             <p class="card-text"><?= substr($brt['berita'], 0, 175); ?></p>
-                            <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya &rarr;</a>
+                            <a href="<?= base_url('post/berita/') . $brt['id_berita']; ?>" class="btn btn-primary btn-sm">Baca Selengkapnya &rarr;</a>
                         </div>
                         <div class="card-footer text-muted">
                             Dipublikasikan pada <?= $brt['tanggal']; ?> Oleh <?= $brt['penulis']; ?>

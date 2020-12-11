@@ -54,4 +54,66 @@ class Berita extends CI_Controller
             redirect('berita');
         }
     }
+    public function ubah($id)
+    {
+        $data['berita'] = $this->Berita_Model->getBeritaById($id);
+        $data['kategori'] = $this->Kategori_Model->getAllKategori();
+
+        $this->form_validation->set_rules('judul', 'Judul Berita', 'required|trim');
+        $this->form_validation->set_rules('penulis', 'Penulis Berita', 'required|trim');
+        $this->form_validation->set_rules('kategori', 'Kategori Berita', 'required|trim');
+        $this->form_validation->set_rules('berita', 'Berita', 'required|trim');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = "Ubah Berita";
+            $this->load->view('layout/header', $data);
+            $this->load->view('berita/ubah', $data);
+            $this->load->view('layout/footer');
+        } else {
+            $id = $this->input->post('id_berita');
+            $judul = $this->input->post('judul');
+            $penulis = $this->input->post('penulis');
+            $kategori = $this->input->post('kategori');
+            $berita = $this->input->post('berita');
+            $tanggal = $this->input->post('tanggal');
+
+            $upload_image = $_FILES['image']['name'];
+
+            if ($upload_image) {
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $config['max_size']      = '5120';
+                $config['upload_path']   = './assets/dist/img/';
+
+                $this->load->library('upload', $config);
+
+                if ($this->upload->do_upload('image')) {
+                    $old_image = $data['user']['image'];
+                    if ($old_image != 'default.jpg') {
+                        unlink(FCPATH . '/assets/dist/img/' . $old_image);
+                    }
+
+                    $new_image = $this->upload->data('file_name');
+                    $this->db->set('foto', $new_image);
+                } else {
+                    echo $this->upload->display_errors();
+                }
+            }
+
+            $this->db->set('judul', $judul);
+            $this->db->set('penulis', $penulis);
+            $this->db->set('kategori', $kategori);
+            $this->db->set('berita', $berita);
+            $this->db->set('tanggal', $tanggal);
+
+            $this->db->where('id_berita', $id);
+            $this->db->update('berita');
+            redirect('berita');
+        }
+    }
+
+    public function hapus($id)
+    {
+        $this->Berita_Model->deleteBerita($id);
+        redirect('berita');
+    }
 }
