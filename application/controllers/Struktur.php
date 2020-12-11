@@ -5,6 +5,11 @@ class Struktur extends CI_Controller
 {
     public function __construct()
     {
+        $data['users'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        if ($data['users'] == null) {
+            return redirect('auth');
+        }
+
         parent::__construct();
         $this->load->model('Struktur_Model');
     }

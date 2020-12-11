@@ -27,7 +27,7 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Judul</th>
                                     <th>Gambar</th>
                                     <th>Penulis</th>
@@ -37,26 +37,27 @@
                                     <th>Kontrol</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody><?php $i = 1; ?>
                                 <?php foreach ($berita as $brt) :  ?>
                                     <tr>
-                                        <td><?= $brt['id_berita']; ?></td>
-                                        <td><?= $brt['judul']; ?></td>
-                                        <td><img style="max-width: 100px;" src="<?= base_url('assets/dist/img/') . $brt['foto']; ?>" alt=""></td>
+                                        <td><?= $i++ ?></td>
+                                        <td style="max-width: 200px;"><?= $brt['judul']; ?></td>
+                                        <td><img style=" max-width: 100px;" src="<?= base_url('assets/dist/img/') . $brt['foto']; ?>" alt=""></td>
                                         <td><?= $brt['penulis']; ?></td>
-                                        <td><?= substr($brt['berita'], 0, 100); ?></td>
+                                        <td><?= substr($brt['berita'], 0, 150); ?></td>
                                         <td><?= $brt['kategori']; ?></td>
                                         <td><?= $brt['tanggal']; ?></td>
                                         <td>
+                                            <a href="<?= base_url('post/berita/') . $brt['id_berita']; ?>" class="btn btn-primary btn-sm" onclick="return confirm('Yakin meninggalkan halaman ini?')"><i class=" fa fa-tv"></i> Lihat</a>
                                             <a href="<?= base_url('berita/ubah/') . $brt['id_berita']; ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Ubah</a>
-                                            <a href="<?= base_url('berita/hapus/') . $brt['id_berita']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin Hapus?')"><i class=" fa fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url('berita/hapus/') . $brt['id_berita']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus berita ini?')"><i class=" fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Judul</th>
                                     <th>Gambar</th>
                                     <th>Penulis</th>
@@ -79,3 +80,14 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+
+    function myFunction() {
+        fruits.sort();
+        document.getElementById("demo").innerHTML = fruits;
+    }
+</script>

@@ -27,16 +27,17 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Kategori</th>
                                     <th>Keterangan</th>
                                     <th>Kontrol</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php $i = 1; ?>
                                 <?php foreach ($kategori as $ktg) :  ?>
                                     <tr>
-                                        <td><?= $ktg['id_kategori']; ?></td>
+                                        <td><?= $i++ ?></td>
                                         <td><?= $ktg['kategori']; ?></td>
                                         <td><?= $ktg['keterangan']; ?></td>
                                         <td>
@@ -48,7 +49,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Kategori</th>
                                     <th>Keterangan</th>
                                     <th>Kontrol</th>
