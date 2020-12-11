@@ -44,7 +44,7 @@
                                         <td style="max-width: 200px;"><?= $brt['judul']; ?></td>
                                         <td><img style=" max-width: 100px;" src="<?= base_url('assets/dist/img/') . $brt['foto']; ?>" alt=""></td>
                                         <td><?= $brt['penulis']; ?></td>
-                                        <td><?= substr($brt['berita'], 0, 150); ?></td>
+                                        <td style="max-width: 400px;"><?= substr($brt['berita'], 0, 150); ?></td>
                                         <td><?= $brt['kategori']; ?></td>
                                         <td><?= $brt['tanggal']; ?></td>
                                         <td>

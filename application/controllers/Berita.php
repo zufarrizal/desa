@@ -16,7 +16,7 @@ class Berita extends CI_Controller
             return redirect('auth');
         }
 
-        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['berita'] = $this->db->order_by('id_berita', "desc")->get('berita')->result_array();
         $data['title'] = "Berita";
         $this->load->view('layout/header', $data);
         $this->load->view('berita/index', $data);

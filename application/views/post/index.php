@@ -14,7 +14,7 @@
             <?php $i = 0; ?>
             <?php foreach ($berita as $brt) : ?>
                 <?php
-                if ($i++ < 3) : ?>
+                if ($i++ < 5) : ?>
                     <div class="card mb-4">
                         <img class="card-img-top" src="<?= base_url('assets/dist/img/') . $brt['foto']; ?>" alt="Card image cap">
                         <div class="card-body">

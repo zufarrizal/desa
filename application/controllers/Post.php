@@ -16,7 +16,7 @@ class Post extends CI_Controller
     public function index()
     {
         $data['tentang'] = $this->Tentang_Model->getTentangById(1);
-        $data['berita'] = $this->Berita_Model->getAllBerita();
+        $data['berita'] = $this->db->order_by('id_berita', "desc")->get('berita')->result_array();
         $data['program'] = $this->Program_Model->getAllProgram();
 
         $data['title'] = "Desa Benerkulon";

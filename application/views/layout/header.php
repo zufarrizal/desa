@@ -79,6 +79,7 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">Iktisar Desa</li>
                     <li><a href="<?= base_url('dashboard'); ?>"><i class="fa fa-book"></i> <span>Dashboard</span></a></li>
+                    <li><a href="<?= base_url('user'); ?>"><i class="fa fa-user"></i> <span>Admin</span></a></li>
                     <li class="header">Kelola Desa</li>
                     <li><a href="<?= base_url('visimisi'); ?>"><i class="fa fa-book"></i> <span>Visi & Misi Desa</span></a></li>
                     <li><a href="<?= base_url('struktur'); ?>"><i class="fa fa-users"></i> <span>Struktur Desa</span></a></li>
