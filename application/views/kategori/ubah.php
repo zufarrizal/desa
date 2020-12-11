@@ -33,7 +33,7 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah</button>
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Ubah</button>
                         </div>
                     </form>
                     <!-- /.box-body -->
