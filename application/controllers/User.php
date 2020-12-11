@@ -38,7 +38,7 @@ class User extends CI_Controller
 
         if (password_verify($password, $user['password'])) {
             $this->db->set('username', $username);
-            if ($password != null) {
+            if ($password1 != null) {
                 $this->db->set('password', $password1);
             }
             $data = [
@@ -48,9 +48,9 @@ class User extends CI_Controller
             $this->db->where('id_user', 1);
             $this->db->update('user');
             $this->session->set_userdata($data);
-            redirect('dashboard');
+            redirect('user');
         } else {
-            redirect('auth');
+            redirect('user');
         }
     }
 }

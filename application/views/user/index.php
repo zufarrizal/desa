@@ -31,7 +31,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password1">Password Baru</label><small class="text-primary"> *Kosongi bila tidak ganti password</small><small class="text-danger"><?= form_error('password1'); ?></small>
-                                <input type="password1" class="form-control" id="password1" name="password1" placeholder="Masukan password baru">
+                                <input type="password" class="form-control" id="password1" name="password1" placeholder="Masukan password baru">
                             </div>
                         </div>
                         <!-- /.box-body -->
