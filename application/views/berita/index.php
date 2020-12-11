@@ -11,7 +11,7 @@
     </section>
 
     <section class="content-header">
-        <a href="<?= base_url('kelas/tambah'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah</a>
+        <a href="<?= base_url('berita/tambah'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Tambah</a>
     </section>
 
     <!-- Main content -->
@@ -29,6 +29,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Judul</th>
+                                    <th>Gambar</th>
                                     <th>Penulis</th>
                                     <th>Berita</th>
                                     <th>Kategori</th>
@@ -41,8 +42,9 @@
                                     <tr>
                                         <td><?= $brt['id_berita']; ?></td>
                                         <td><?= $brt['judul']; ?></td>
+                                        <td><img style="max-width: 100px;" src="<?= base_url('assets/dist/img/') . $brt['foto']; ?>" alt=""></td>
                                         <td><?= $brt['penulis']; ?></td>
-                                        <td><?= substr($brt['berita'], 0, 150); ?></td>
+                                        <td><?= substr($brt['berita'], 0, 100); ?></td>
                                         <td><?= $brt['kategori']; ?></td>
                                         <td><?= $brt['tanggal']; ?></td>
                                         <td>
@@ -56,6 +58,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Judul</th>
+                                    <th>Gambar</th>
                                     <th>Penulis</th>
                                     <th>Berita</th>
                                     <th>Kategori</th>

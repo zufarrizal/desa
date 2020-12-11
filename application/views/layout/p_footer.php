@@ -13,7 +13,7 @@
 <!-- Sidebar Widgets Column -->
 <div class="col-md-4">
 
-    <!-- Search Widget -->
+    <!-- Search Widget
     <div class="card my-4">
         <h5 class="card-header">Pencarian</h5>
         <div class="card-body">
@@ -24,37 +24,21 @@
                 </span>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Categories Widget -->
+    <?php $kategori = $this->db->get('kategori')->result_array(); ?>
     <div class="card my-4">
         <h5 class="card-header">Kategori</h5>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#">UMKM</a>
-                        </li>
-                        <li>
-                            <a href="#">Agenda</a>
-                        </li>
-                        <li>
-                            <a href="#">Laporan</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#">Peraturan</a>
-                        </li>
-                        <li>
-                            <a href="#">Pembangunan</a>
-                        </li>
-                        <li>
-                            <a href="#">Dokumentasi</a>
-                        </li>
+                        <?php foreach ($kategori as $ktg) : ?>
+                            <li>
+                                <a href=""><?= $ktg['kategori']; ?></a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -63,9 +47,9 @@
 
     <!-- Side Widget -->
     <div class="card my-4">
-        <h5 class="card-header">Desa Benerkulon</h5>
+        <h5 class="card-header">Peta Desa Benerkulon</h5>
         <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15812.383638670517!2d109.73511022709833!3d-7.779654860293523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7acf7128d52bfb%3A0x5027a76e3554090!2sBenerkulon%2C%20Kec.%20Ambal%2C%20Kabupaten%20Kebumen%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1607611828696!5m2!1sid!2sid" max-width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
 

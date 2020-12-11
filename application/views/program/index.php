@@ -21,7 +21,7 @@
                     <!-- /.box-header -->
                     <form role="form" method="POST" action="" enctype="multipart/form-data">
                         <div class="box-body">
-                            <input type="hidden" class="form-control" id="exampleInputEmail1" name="id_program" id="id_program" value="<?= $program['id_program']; ?>">
+                            <input type="hidden" class="form-control" name="id_program" id="id_program" value="<?= $program['id_program']; ?>">
                             <div class="form-group">
                                 <label for="foto">Tampilan Foto Sekarang</label>
                                 <img src="<?= base_url('assets/dist/img/') . $program['foto']; ?>" alt="<?= $program['foto']; ?>" style="max-width: 100%;">

@@ -21,7 +21,7 @@
                     <!-- /.box-header -->
                     <form role="form" method="POST" action="" enctype="multipart/form-data">
                         <div class="box-body">
-                            <input type="hidden" class="form-control" id="exampleInputEmail1" name="id_tentang" id="id_tentang" value="<?= $tentang['id_tentang']; ?>">
+                            <input type="hidden" class="form-control" name="id_tentang" id="id_tentang" value="<?= $tentang['id_tentang']; ?>">
                             <div class="form-group">
                                 <label for="foto">Tampilan Foto Sekarang</label>
                                 <img src="<?= base_url('assets/dist/img/') . $tentang['foto']; ?>" alt="<?= $tentang['foto']; ?>" style="max-width: 100%;">

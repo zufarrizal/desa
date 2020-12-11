@@ -21,7 +21,7 @@
                     <!-- /.box-header -->
                     <form role="form" method="POST" action="" enctype="multipart/form-data">
                         <div class="box-body">
-                            <input type="hidden" class="form-control" id="exampleInputEmail1" name="id_struktur" id="id_struktur" value="<?= $struktur['id_struktur']; ?>">
+                            <input type="hidden" class="form-control" name="id_struktur" id="id_struktur" value="<?= $struktur['id_struktur']; ?>">
                             <div class="form-group">
                                 <label for="foto">Tampilan Foto Sekarang</label>
                                 <img src="<?= base_url('assets/dist/img/') . $struktur['foto']; ?>" alt="<?= $struktur['foto']; ?>" style="max-width: 100%;">
